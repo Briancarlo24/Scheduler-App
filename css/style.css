@@ -79,7 +79,7 @@ body {
   transform: scale(1.1);
   border-radius: 6px;
 
-  z-index: 100;
+  z-index: 1001;
 }
 .calendar:first-child::after {
   content: "Today";
