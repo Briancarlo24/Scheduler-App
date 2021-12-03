@@ -32,6 +32,11 @@ body {
   display: grid;
   place-items: center;
 }
+@media (max-width: 998px) {
+  body {
+    padding: 1.5rem;
+  }
+}
 
 .heading--title {
   font-size: 4rem;
@@ -45,6 +50,12 @@ body {
   color: var(--color-secondary);
   opacity: 0.7;
   line-height: 29.16px;
+}
+
+@media (max-width: 998px) {
+  .heading--title {
+    font-size: 3rem;
+  }
 }
 
 .demo {
@@ -73,10 +84,19 @@ body {
 
   position: relative;
 }
-.row .calendar:hover {
+
+.row .calendar:nth-child(5) {
   color: var(--color-white);
   background-color: var(--color-primary);
   transform: scale(1.1);
+  border-radius: 6px;
+
+  z-index: 1001;
+}
+
+.row .calendar:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
   border-radius: 6px;
 
   z-index: 1001;
@@ -132,6 +152,11 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
+@media (max-width: 998px) {
+  .btn--next {
+    width: calc(100% - 5rem);
+  }
+}
 
 .btn--next:hover {
   background-color: var(--color-primary);
@@ -153,6 +178,13 @@ body {
 }
 .demo-image {
   width: 100%;
+}
+@media (max-width: 998px) {
+  .demo-image--container {
+    width: 31.3em;
+    height: 7.1em;
+    transform: translateX(50%);
+  }
 }
 
 .icon-wrapper {
@@ -178,6 +210,7 @@ body {
 /* Layout */
 .section {
   max-width: 99.8rem;
+  min-width: 65rem;
   margin: 10rem auto;
   background-color: var(--color-blue-white);
   position: relative;
@@ -210,20 +243,6 @@ body {
   min-height: 17.1rem;
 }
 
-.pad-left {
-  padding-left: 8.5rem;
-}
-
-.pad--left-right {
-  padding-left: 10.2rem;
-  padding-right: 10.2rem;
-}
-
-.mar--left-right {
-  margin-left: 10.2rem;
-  margin-right: 10.2rem;
-}
-
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -250,6 +269,36 @@ body {
 /* Global */
 .text-left {
   text-align: left;
+}
+
+.pad--left {
+  padding-left: 8.5rem;
+}
+
+.pad--left-right {
+  padding-left: 10.2rem;
+  padding-right: 10.2rem;
+}
+
+.mar--left-right {
+  margin-left: 10.2rem;
+  margin-right: 10.2rem;
+}
+
+@media (max-width: 998px) {
+  .pad--left {
+    padding-left: 3.5rem;
+  }
+
+  .pad--left-right {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .mar--left-right {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
 }
 
 .box-shadow {
